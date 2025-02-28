@@ -1,9 +1,16 @@
 # Mars Rover Timelapse
- Create timelapses from Mars rover images using the [Mars Rover Photo API](https://github.com/corincerami/mars-photo-api)
+Tool to create timelapses from Mars rover images using the [Mars Rover Photo API](https://github.com/corincerami/mars-photo-api).
 
 
 ## Installation
 
+1. Clone the repository
+2. Install the requirements: `pip install -r requirements.txt`
+3. [Sign up for a NASA API Key](https://api.nasa.gov/)
+4.
+    Create a file named `.env` containing `NASA_API_KEY=<YOUR API KEY>`
+    **OR**
+    When using the tool, pass the additional parameter `--key <YOUR API KEY>`
 
 ## Usage
 
@@ -15,14 +22,15 @@ python make_timelapse.py \
     --sol_start 310
 ```
 
-| Flag          | Possible Values   | Description      |
+| Argument / Flag | Possible Values   | Description      |
 | ------------- | ------------- | ------------- |
 | `--rover` | `perseverance`, `curiosity` | **REQUIRED**  Name of the rover from which to download images. |
-| `--camera` | [valid camera names](https://github.com/corincerami/mars-photo-api?tab=readme-ov-file#cameras)<br/>ex: `FRONT_HAZCAM_LEFT_A` | **REQUIRED**  Name of the rover from which to download images. |
+| `--camera` | [valid camera name](https://github.com/corincerami/mars-photo-api?tab=readme-ov-file#cameras)<br/>ex: `FRONT_HAZCAM_LEFT_A` | **REQUIRED**  Name of the rover from which to download images. |
 | `--sol_start` | [SOL calculator](https://solonmars.com/)<br/>ex: `305` | **REQUIRED**  First Mars SOL to include in the timelapse. |
 | `--sol_end` | [SOL calculator](https://solonmars.com/)<br/>ex: `315` | **REQUIRED**  Last Mars SOL to include in the timelapse. Must be equal or greater than `sol_start` |
 | `--fps` | integer `> 0` | Frames per second of exported video. Default: `2` |
 | `--min_aspect_ratio` | float `> 0.0` | Minimum aspect ratio of pictures to include in the timelapse. Default: `0` |
+| `--key` | Your NASA API Key | Pass your NASA API Key as an argument if you did not create a `.env` file. **REQUIRED if no `.env` file** |
 | `--keep_temp` | N/A | Pass this flag to prevent the deletion of the temporary directory containing the raw and resized images upon completion. On the following runs, images will not be redownloaded unless `--force_download` is passed. |
 | `--force_download` | N/A | Pass this flag to force downloading of images that already exist in the temp directory if it exists |
 
