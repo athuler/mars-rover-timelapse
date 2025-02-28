@@ -102,10 +102,19 @@ def process_sol(
     rover: str,
     force_download: bool,
     camera: str,
+    key: str,
 ):
+    
+    if key != "":
+        API_KEY = key
+    elif "NASA_API_KEY" in os.environ:
+        API_KEY = os.environ["NASA_API_KEY"]
+    else:
+        raise ValueError("Missing NASA API Key!")
+
 
     params = {
-        "api_key": os.environ["NASA_API_KEY"],
+        "api_key": API_KEY,
         "sol": sol,
         "camera": camera,
     }
@@ -147,6 +156,7 @@ def main(
     fps: float,
     keep_temp: bool,
     camera: str,
+    key: str,
 ):
     # Check end sol is in the future
     assert sol_start <= sol_end
@@ -162,6 +172,7 @@ def main(
             rover = rover,
             force_download = force_download,
             camera = camera,
+            key = key,
         ))
         current_sol += 1
     
@@ -225,6 +236,12 @@ if __name__ == "__main__":
         help = "Camera on the rover",
     )
     parser.add_argument(
+        "--key",
+        type = str,
+        default = "",
+        help = "NASA API Key",
+    )
+    parser.add_argument(
         "--force_download",
         action = "store_true",
         help = "Force download of images.",
@@ -246,4 +263,5 @@ if __name__ == "__main__":
         fps = args.fps,
         keep_temp = args.keep_temp,
         camera = args.camera,
+        key = args.key,
     )
