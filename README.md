@@ -1,6 +1,7 @@
 # Mars Rover Timelapse
  Create timelapses from Mars rover images using the [Mars Rover Photo API](https://github.com/corincerami/mars-photo-api)
 
+![curiosity-FHAZ-SOL340-345-5 0fps-0 0](https://github.com/user-attachments/assets/b2253532-dd05-438a-a6dc-c2845d4ea8ce)
 
 ## Installation
 
