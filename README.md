@@ -39,3 +39,10 @@ python make_timelapse.py \
 
 > [!NOTE]  
 > The `opportunity` and `spirit` rover images are unavailable as NASA took down the images from their server. You can read more about it on [this](https://github.com/corincerami/mars-photo-api/issues/197) Github issue and [this](https://www.reddit.com/r/Mars/comments/1c7a4kd/due_to_the_website_change_i_can_no_longer_find/) Reddit thread.
+
+## Examples
+
+```bash
+python .\make_timelapse.py --sol_start 0 --sol_end 5 --keep_temp --fps 5 --min_aspect_ratio 0 --rover perseverance --camera EDL_DDCAM 
+```
+![perseverance-EDL_DDCAM-SOL0-5-5 0fps-0 0](https://github.com/user-attachments/assets/d76e8477-3299-4bac-850c-fc9e129da78a)
