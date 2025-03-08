@@ -43,6 +43,26 @@ python make_timelapse.py \
 ## Examples
 
 ```bash
-python .\make_timelapse.py --sol_start 0 --sol_end 5 --keep_temp --fps 5 --min_aspect_ratio 0 --rover perseverance --camera EDL_DDCAM 
+python .\make_timelapse.py \
+    --sol_start 0 \
+    --sol_end 5 \
+    --keep_temp \
+    --fps 5 \
+    --min_aspect_ratio 0 \
+    --rover perseverance \
+    --camera EDL_DDCAM 
 ```
 ![perseverance-EDL_DDCAM-SOL0-5-5 0fps-0 0](https://github.com/user-attachments/assets/d76e8477-3299-4bac-850c-fc9e129da78a)
+
+```bash
+python .\make_timelapse.py \
+    --sol_start 2 \
+    --sol_end 2 \
+    --keep_temp \
+    --fps 15 \
+    --min_aspect_ratio 0 \
+    --rover perseverance \
+    --camera EDL_RDCAM
+```
+![perseverance-EDL_RDCAM-SOL2-2-15.0fps-0](https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif)
+*(trimmed video)*
