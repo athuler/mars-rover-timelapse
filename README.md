@@ -65,6 +65,6 @@ python .\make_timelapse.py \
     --camera EDL_RDCAM
 ```
 
-![perseverance-EDL_RDCAM-SOL2-2-15.0fps-0 0](https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif)
+<img alt="perseverance-EDL_RDCAM-SOL2-2-15.0fps-0" src="https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif" />
 
 *(trimmed video)*
