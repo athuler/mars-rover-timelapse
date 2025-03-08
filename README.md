@@ -64,5 +64,7 @@ python .\make_timelapse.py \
     --rover perseverance \
     --camera EDL_RDCAM
 ```
-![perseverance-EDL_RDCAM-SOL2-2-15.0fps-0](https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif)
+
+![perseverance-EDL_RDCAM-SOL2-2-15.0fps-0 0](https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif)
+
 *(trimmed video)*
