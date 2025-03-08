@@ -128,7 +128,7 @@ def process_sol(
     # Process rate limit headers
     if "X-RateLimit-Remaining" in r.headers:
         ratelimit_remaining = int(r.headers["X-RateLimit-Remaining"])
-        if ratelimit_remaining < 250:
+        if ratelimit_remaining <= 500:
             print(f"WARNING: {ratelimit_remaining} API requests remaining in your limit.")
     else:
         print(f"WARNING: Unknown number of API requests remaining in your limit")
