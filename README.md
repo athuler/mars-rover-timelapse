@@ -105,3 +105,13 @@ python make_timelapse.py \
     --camera FHAZ
 ```
 ![curiosity-FHAZ-SOL340-345-5 0fps-0 0](https://github.com/user-attachments/assets/b2253532-dd05-438a-a6dc-c2845d4ea8ce)
+
+```bash
+python make_timelapse.py \
+    --sol_start 340 \
+    --sol_end 340 \
+    --keep_temp \
+    --fps 15 \
+    --rover curiosity \
+    --camera NAVCAM
+```
