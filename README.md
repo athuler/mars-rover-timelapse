@@ -115,3 +115,4 @@ python make_timelapse.py \
     --rover curiosity \
     --camera NAVCAM
 ```
+![curiosity-NAVCAM-SOL340-340-15 0fps-0 0](https://github.com/user-attachments/assets/3d92c611-0dc2-44c5-92ad-4e6f24f36141)
