@@ -5,7 +5,7 @@ Tool to create timelapses from Mars rover images using the [Mars Rover Photo API
 
 ## Installation
 
-1. Clone the repository
+1. Clone/[Download](https://github.com/athuler/mars-rover-timelapse/archive/refs/heads/main.zip) the repository
 2. Install the requirements: `pip install -r requirements.txt`
 3. [Sign up for a NASA API Key](https://api.nasa.gov/)
 4.
