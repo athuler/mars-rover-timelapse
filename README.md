@@ -78,3 +78,14 @@ python make_timelapse.py \
 ```
 ![perseverance-REAR_HAZCAM_LEFT-SOL1250-1350-5 0fps-0 0](https://github.com/user-attachments/assets/a8e7605d-a40f-41dd-81ee-3972865a1d2a)
 
+```bash
+python make_timelapse.py \
+    --sol_start 340 \
+    --sol_end 345 \
+    --keep_temp \
+    --fps 5 \
+    --rover perseverance \
+    --min_aspect_ratio 3 \
+    --camera NAVCAM_LEFT
+```
+
