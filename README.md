@@ -94,3 +94,14 @@ python make_timelapse.py \
 ```
 ![perseverance-NAVCAM_LEFT-SOL340-345-5 0fps-3 0](https://github.com/user-attachments/assets/b92612bd-840b-4dc9-b418-b04422110308)
 
+
+```bash
+python make_timelapse.py \
+    --sol_start 340 \
+    --sol_end 345 \
+    --keep_temp \
+    --fps 5 \
+    --rover curiosity \
+    --camera FHAZ
+```
+![curiosity-FHAZ-SOL340-345-5 0fps-0 0](https://github.com/user-attachments/assets/b2253532-dd05-438a-a6dc-c2845d4ea8ce)
