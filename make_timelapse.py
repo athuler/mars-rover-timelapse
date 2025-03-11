@@ -151,6 +151,8 @@ def main(
     rover: str,
     sol_start: int,
     sol_end: int,
+    img_perc_start: int,
+    img_perc_end: int,
     min_aspect_ratio: float,
     force_download: bool,
     fps: float,
@@ -160,8 +162,10 @@ def main(
 ):
     # Check end sol is in the future
     assert sol_start <= sol_end
-
     current_sol = sol_start
+
+    # Check Image Percentage 
+    assert img_perc_start <= img_perc_end
 
     # Download Images
     images = []
@@ -176,10 +180,19 @@ def main(
         ))
         current_sol += 1
     
+    # Reduce Number of Images
+    images_start = int(img_perc_start/100*len(images))
+    images_end = int(img_perc_end/100*len(images))
+    if img_perc_start==0 and img_perc_end==100:
+        images_trim = ""
+    else:
+        images_trim = f"-{img_perc_start}%-{img_perc_end}%"
+
+
     # Make Video
     make_video(
-        all_images = images,
-        video_name = f"{rover}-{camera}-SOL{sol_start}-{sol_end}-{fps}fps-{min_aspect_ratio}",
+        all_images = images[images_start:images_end],
+        video_name = f"{rover}-{camera}-SOL{sol_start}-{sol_end}-{fps}fps-{min_aspect_ratio}{images_trim}",
         min_aspect_ratio = min_aspect_ratio,
         fps = fps,
     )
@@ -216,6 +229,18 @@ if __name__ == "__main__":
         type = int,
         required = True,
         help = "End sol for timelapse",
+    )
+    parser.add_argument(
+        "--img_perc_start",
+        type = int,
+        default = 0,
+        help = "From all the images collected, at which percentage to start the timelapse",
+    )
+    parser.add_argument(
+        "--img_perc_end",
+        type = int,
+        default = 100,
+        help = "From all the images collected, at which percentage to end the timelapse",
     )
     parser.add_argument(
         "--min_aspect_ratio",
@@ -258,6 +283,8 @@ if __name__ == "__main__":
         rover = args.rover,
         sol_start = args.sol_start,
         sol_end = args.sol_end,
+        img_perc_start = args.img_perc_start,
+        img_perc_end = args.img_perc_end,
         min_aspect_ratio = args.min_aspect_ratio,
         force_download = args.force_download,
         fps = args.fps,

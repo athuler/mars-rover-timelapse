@@ -29,6 +29,8 @@ python make_timelapse.py \
 | `--camera` | [valid camera name](https://github.com/corincerami/mars-photo-api?tab=readme-ov-file#cameras)<br/>ex: `FRONT_HAZCAM_LEFT_A` | **REQUIRED**  Name of the rover from which to download images. |
 | `--sol_start` | [SOL calculator](https://solonmars.com/)<br/>ex: `305` | **REQUIRED**  First Mars SOL to include in the timelapse. |
 | `--sol_end` | [SOL calculator](https://solonmars.com/)<br/>ex: `315` | **REQUIRED**  Last Mars SOL to include in the timelapse. Must be equal or greater than `sol_start` |
+| `--img_perc_start` | integer between `0` and `100` | Trim the start of the timelapse. Must be lower than `img_perc_end`. Defaults to `0`. |
+| `--img_perc_end` | integer between `0` and `100` | Trim the end of the timelapse. Must be greater than `img_perc_start`. Defaults to `100`. |
 | `--fps` | integer `> 0` | Frames per second of exported video. Default: `2` |
 | `--min_aspect_ratio` | float `> 0.0` | Minimum aspect ratio of pictures to include in the timelapse. Default: `0` |
 | `--key` | Your NASA API Key | Pass your NASA API Key as an argument if you did not create a `.env` file. **REQUIRED if no `.env` file** |
@@ -58,13 +60,10 @@ python .\make_timelapse.py \
 python .\make_timelapse.py \
     --sol_start 2 \
     --sol_end 2 \
+    --img_perc_end 14 \
     --keep_temp \
     --fps 15 \
     --min_aspect_ratio 0 \
     --rover perseverance \
     --camera EDL_RDCAM
 ```
-
-<img alt="perseverance-EDL_RDCAM-SOL2-2-15.0fps-0" src="https://andreithuler.com/wp-content/uploads/perseverance-EDL_RDCAM-SOL2-2-15.0fps-0_TRIMMED_LIGHT.gif" />
-
-*(trimmed video)*
