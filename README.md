@@ -76,4 +76,5 @@ python make_timelapse.py \
     --rover perseverance \
     --camera REAR_HAZCAM_LEFT
 ```
+![perseverance-REAR_HAZCAM_LEFT-SOL1250-1350-5 0fps-0 0](https://github.com/user-attachments/assets/a8e7605d-a40f-41dd-81ee-3972865a1d2a)
 
