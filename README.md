@@ -13,6 +13,10 @@ Tool to create timelapses from Mars rover images using the [Mars Rover Photo API
     **OR**
     When using the tool, pass the additional parameter `--key <YOUR API KEY>`
 
+> [!NOTE]  
+> You will need to have Python installed to run this. Don't have it? [Download it](https://www.python.org/downloads/).
+
+
 ## Usage
 
 ```sh
