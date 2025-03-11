@@ -45,27 +45,35 @@ python make_timelapse.py \
 ## Examples
 
 ```bash
-python .\make_timelapse.py \
+python make_timelapse.py \
     --sol_start 0 \
     --sol_end 5 \
     --keep_temp \
     --fps 5 \
-    --min_aspect_ratio 0 \
     --rover perseverance \
     --camera EDL_DDCAM 
 ```
 ![perseverance-EDL_DDCAM-SOL0-5-5 0fps-0 0](https://github.com/user-attachments/assets/d76e8477-3299-4bac-850c-fc9e129da78a)
 
 ```bash
-python .\make_timelapse.py \
+python make_timelapse.py \
     --sol_start 2 \
     --sol_end 2 \
     --img_perc_end 14 \
     --keep_temp \
     --fps 5 \
-    --min_aspect_ratio 0 \
     --rover perseverance \
     --camera EDL_RDCAM
 ```
 ![perseverance-EDL_RDCAM-SOL2-2-5 0fps-0 0-0_-14_](https://github.com/user-attachments/assets/e7fa4174-39f8-46d3-8dc9-a83182b9f841)
+
+```bash
+python make_timelapse.py \
+    --sol_start 1250 \
+    --sol_end 1350 \
+    --keep_temp \
+    --fps 5 \
+    --rover perseverance \
+    --camera REAR_HAZCAM_LEFT
+```
 
