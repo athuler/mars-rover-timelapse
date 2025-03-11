@@ -62,8 +62,10 @@ python .\make_timelapse.py \
     --sol_end 2 \
     --img_perc_end 14 \
     --keep_temp \
-    --fps 15 \
+    --fps 5 \
     --min_aspect_ratio 0 \
     --rover perseverance \
     --camera EDL_RDCAM
 ```
+![perseverance-EDL_RDCAM-SOL2-2-5 0fps-0 0-0_-14_](https://github.com/user-attachments/assets/e7fa4174-39f8-46d3-8dc9-a83182b9f841)
+
